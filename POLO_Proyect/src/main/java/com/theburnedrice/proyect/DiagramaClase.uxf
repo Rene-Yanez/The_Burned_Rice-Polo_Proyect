@@ -1,0 +1,202 @@
+<diagram program="umletino" version="15.1"><zoom_level>7</zoom_level><help_text></help_text><element><id>UMLClass</id><coordinates><x>294</x><y>28</y><w>203</w><h>280</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Usuario
+----------------------------------
+- id_usuario: Integer
+- nombre_usuario: String
+- apellidos_usuario: String
+- nick_usuario: String
+- email: String
+- password: String
+- id_rol: Integer
+----------------------------------
++ getIdUsuario(): Integer
++ getNombreUsuario(): String
++ getApellidosUsuario(): String
++ getNickUsuario(): String
++ getEmail(): String
++ getPassword(): String
++ getIdRol(): Integer
++ setIdUsuario(id: Integer)
++ setNombreUsuario(nombre: String)
++ setApellidosUsuario(apellidos: String)
++ setNickUsuario(nick: String)
++ setEmail(email: String)
++ setPassword(password: String)
++ setIdRol(idRol: Integer)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>28</x><y>406</y><w>245</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::ConvenioTieneCentro
+----------------------------------
+- id_convenio: Integer
+- id_centro: Integer
+----------------------------------</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>798</x><y>462</y><w>203</w><h>182</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Proyecto
+----------------------------------
+- id_proyecto: Integer
+- nombre_proyecto: String
+- fecha_proyecto: Date
+- descripcion_proyecto: String
+----------------------------------
++ getIdProyecto(): Integer
++ getNombreProyecto(): String
++ getFechaProyecto(): Date
++ getDescripcionProyecto(): String
++ setIdProyecto(id: Integer)
++ setNombreProyecto(nombre: String)
++ setFechaProyecto(fecha: Date)
++ setDescripcionProyecto(descripcion: String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>469</y><w>182</w><h>217</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Noticia
+----------------------------------
+- id_noticia: Integer
+- titulo: String
+- contenido: String
+- categoria: String
+- fecha_noticia: Date
+----------------------------------
++ getIdNoticia(): Integer
++ getTitulo(): String
++ getContenido(): String
++ getCategoria(): String
++ getFechaNoticia(): Date
++ setIdNoticia(id: Integer)
++ setTitulo(titulo: String)
++ setContenido(contenido: String)
++ setCategoria(categoria: String)
++ setFechaNoticia(fecha: Date)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>553</x><y>518</y><w>203</w><h>168</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Comentario
+----------------------------------
+- id_comentario: Integer
+- id_usuario: Integer
+- fecha_comentario: Date
+- contenido: String
+- id_noticia: Integer
+----------------------------------
++ getIdComentario(): Integer
++ getIdUsuario(): Integer
++ getFechaComentario(): Date
++ getContenido(): String
++ getIdNoticia(): Integer
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>532</x><y>315</y><w>196</w><h>217</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Convenio
+----------------------------------
+- id_convenio: Integer
+- nombre_convenio: String
+- fecha_convenio: Date
+- descripcion_convenio: String
+- datos: String
+----------------------------------
++ getIdConvenio(): Integer
++ getNombreConvenio(): String
++ getFechaConvenio(): Date
++ getDescripcionConvenio(): String
++ getDatos(): String
++ setIdConvenio(id: Integer)
++ setNombreConvenio(nombre: String)
++ setFechaConvenio(fecha: Date)
++ setDescripcionConvenio(descripcion: String)
++ setDatos(datos: String)
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>938</x><y>28</y><w>280</w><h>119</h></coordinates><panel_attributes>&lt;&lt;Controller&gt;&gt;
+com.theburnedrice.proyect.controller::ProyectoController
+----------------------------------
+- proyectoService: ProyectoService
+----------------------------------
++ listarProyectos(): List&lt;Proyecto&gt;
++ obtenerProyecto(id: Long): Proyecto
++ crearProyecto(proyecto: Proyecto): Proyecto
++ actualizarProyecto(id: Long, proyecto: Proyecto): Proyecto
++ eliminarProyecto(id: Long): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>1029</x><y>518</y><w>217</w><h>119</h></coordinates><panel_attributes>&lt;&lt;Service&gt;&gt;
+com.theburnedrice.proyect.service::UsuarioService
+----------------------------------
+- usuarioRepository: UsuarioRepository
+----------------------------------
++ createUser(user: Usuario): Usuario
++ getAllUsers(): List&lt;Usuario&gt;
++ getUserById(id: Long): Usuario
++ updateUser(id: Long, user: Usuario): Usuario
++ deleteUser(id: Long): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>308</x><y>322</y><w>182</w><h>140</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Centro
+----------------------------------
+- id_centro: Integer
+- nombre_centro: String
+- descripcion: String
+- informacion: String
+----------------------------------
++ getIdCentro(): Integer
++ getNombreCentro(): String
++ getDescripcion(): String
++ getInformacion(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>21</x><y>483</y><w>273</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::ProyectoInvolucraCarrera
+----------------------------------
+- id_proyecto: Integer
+- id_carrera: Integer
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>35</x><y>322</y><w>252</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::ProyectoTieneConvenio
+----------------------------------
+- id_proyecto: Integer
+- id_convenio: Integer
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>707</x><y>21</y><w>175</w><h>98</h></coordinates><panel_attributes>&lt;&lt;Entity&gt;&gt;
+com.theburnedrice.proyect.models::Rol
+----------------------------------
+- id_rol: Integer
+- nombre_rol: String
+----------------------------------
++ getIdRol(): Integer
++ getNombreRol(): String
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>28</x><y>175</y><w>203</w><h>133</h></coordinates><panel_attributes>&lt;&lt;DTO&gt;&gt;
+com.theburnedrice.proyect.models::UsuarioDTO
+----------------------------------
+- id_usuario: Integer
+- nombre_usuario: String
+- apellidos_usuario: String
+- nick_usuario: String
+- email: String
+- password: String
+- id_rol: Integer
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>42</x><y>42</y><w>238</w><h>105</h></coordinates><panel_attributes>&lt;&lt;DTO&gt;&gt;
+com.theburnedrice.proyect.models::ConvenioDTO
+----------------------------------
+- id_convenio: Integer
+- nombre_convenio: String
+- fecha_convenio: Date
+- descripcion_convenio: String
+- datos: String
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>735</x><y>224</y><w>224</w><h>91</h></coordinates><panel_attributes>&lt;&lt;DTO&gt;&gt;
+com.theburnedrice.proyect.models::ProyectoDTO
+----------------------------------
+- id_proyecto: Integer
+- nombre_proyecto: String
+- fecha_proyecto: Date
+- descripcion_proyecto: String
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>742</x><y>329</y><w>210</w><h>91</h></coordinates><panel_attributes>&lt;&lt;DTO&gt;&gt;
+com.theburnedrice.proyect.models::CarreraDTO
+----------------------------------
+- id_carrera: Integer
+- nombre_carrera: String
+- codigo_carrera: Integer
+- descripcion_carrera: String
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>175</y><w>231</w><h>77</h></coordinates><panel_attributes>&lt;&lt;Mapper&gt;&gt;
+com.theburnedrice.proyect.models::UsuarioMapper
+----------------------------------
++ toDTO(usuario: Usuario): UsuarioDTO
++ toEntity(usuarioDTO: UsuarioDTO): Usuario
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>980</x><y>266</y><w>231</w><h>70</h></coordinates><panel_attributes>&lt;&lt;Mapper&gt;&gt;
+com.theburnedrice.proyect.models::ConvenioMapper
+----------------------------------
++ toDTO(convenio: Convenio): ConvenioDTO
++ toEntity(convenioDTO: ConvenioDTO): Convenio
+----------------------------------
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>14</y><w>231</w><h>35</h></coordinates><panel_attributes>lt=-
+m1=0..n
+m2=0..1
+teaches to &gt;</panel_attributes><additional_attributes>10;20;310;20</additional_attributes></element></diagram>
