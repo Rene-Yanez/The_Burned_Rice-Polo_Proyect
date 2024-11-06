@@ -15,7 +15,7 @@ import lombok.Data;
 @DynamicUpdate
 @DynamicInsert
 @Table(name="proyecto")
-public class Proyecto implements Serializable{
+public class proyecto implements Serializable{
  
     private static final long serialVersionUID = 1L;
     

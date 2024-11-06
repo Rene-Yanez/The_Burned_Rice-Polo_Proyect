@@ -1,7 +1,7 @@
 package com.theburnedrice.proyect.models;
 import java.util.ArrayList;
 import java.util.List;
-public class ProyectoDTO {
+public class proyectoDTO {
     private int id_proyecto;
     
     

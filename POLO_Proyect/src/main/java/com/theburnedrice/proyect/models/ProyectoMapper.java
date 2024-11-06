@@ -4,10 +4,10 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 @Mapper
-public interface ProyectoMapper {
-ProyectoDTO proyectoToProyectoDTO(Proyecto entidad);
-    Proyecto proyectoDTOToProyecto(ProyectoDTO dto);
+public interface proyectoMapper {
+proyectoDTO proyectoToProyectoDTO(proyecto entidad);
+    proyecto proyectoDTOToProyecto(proyectoDTO dto);
 
-    List<ProyectoDTO> proyectoListToProyectoDTOList(List<Proyecto> entidadList);
-    List<Proyecto> proyectoDTOListToProyectoList(List<ProyectoDTO> dtoList);
+    List<proyectoDTO> proyectoListToProyectoDTOList(List<proyecto> entidadList);
+    List<proyecto> proyectoDTOListToProyectoList(List<proyectoDTO> dtoList);
 }
