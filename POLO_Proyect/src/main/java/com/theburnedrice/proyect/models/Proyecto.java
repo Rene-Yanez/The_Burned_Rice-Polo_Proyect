@@ -1,6 +1,6 @@
-package main.java.com.theburnedrice.proyect.models;
+package com.theburnedrice.proyect.models;
 
-import 
+import jakarta.persistence.*;
 
 @Entity
 public class Proyecto {
