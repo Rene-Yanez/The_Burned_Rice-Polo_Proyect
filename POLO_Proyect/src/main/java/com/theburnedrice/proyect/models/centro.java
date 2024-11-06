@@ -1,14 +1,21 @@
 package com.theburnedrice.proyect.models;
 
-import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import java.io.Serializable;
 
+import org.hibernate.annotations.DynamicInsert;
+import org.hibernate.annotations.DynamicUpdate;
+
+import jakarta.persistence.*;
+import lombok.Data;
+
+@Data
 @Entity
-@Getter
-@Setter
+@DynamicUpdate
+@DynamicInsert
 @Table(name ="centro")
-public class centro {
+public class centro implements Serializable{
+    
+    private static final long serialVersionUID = 1L;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
