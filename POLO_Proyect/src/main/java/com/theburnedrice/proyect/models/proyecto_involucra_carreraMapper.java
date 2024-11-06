@@ -1,5 +1,13 @@
 package com.theburnedrice.proyect.models;
+import java.util.List;
 
+import org.mapstruct.Mapper;
+
+@Mapper
 public interface proyecto_involucra_carreraMapper {
+proyecto_involucra_carreraDTO proyecto_involucra_carreraToproyecto_involucra_carreraDTO(proyecto_involucra_carrera entidad);
+proyecto_involucra_carrera proyecto_involucra_carreraDTOToproyecto_involucra_carrera(proyecto_involucra_carreraDTO dto);
 
+    List<proyecto_involucra_carreraDTO> proyecto_involucra_carreraListToproyecto_involucra_carreraDTOList(List<proyecto_involucra_carrera> entidadList);
+    List<proyecto_involucra_carrera> proyecto_involucra_carreraDTOListToproyecto_involucra_carreraList(List<proyecto_involucra_carreraDTO> dtoList);
 }
