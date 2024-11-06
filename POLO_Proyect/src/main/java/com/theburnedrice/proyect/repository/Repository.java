@@ -1,5 +1,9 @@
-package main.java.com.theburnedrice.proyect.repository;
+package com.theburnedrice.proyect.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface Repository extends JpaRepository<Proyecto, Long>{
+import com.theburnedrice.proyect.models.usuario;
+
+public interface Repository extends JpaRepository<usuario, Long> {
 
 }
+
