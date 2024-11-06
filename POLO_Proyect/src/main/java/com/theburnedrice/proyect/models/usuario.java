@@ -23,6 +23,7 @@ public class usuario {
 
     private String email;
     
+    
     private String password;
 
 
