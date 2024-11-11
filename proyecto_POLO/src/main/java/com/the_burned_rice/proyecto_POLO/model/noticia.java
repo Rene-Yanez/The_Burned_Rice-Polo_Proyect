@@ -1,4 +1,4 @@
-package com.theburnedrice.proyect.models;
+package com.the_burned_rice.proyecto_POLO.model;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

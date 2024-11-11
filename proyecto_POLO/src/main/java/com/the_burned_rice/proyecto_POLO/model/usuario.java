@@ -8,8 +8,6 @@ import org.hibernate.annotations.DynamicUpdate;
 import jakarta.persistence.*;
 import lombok.Data;
 
-@NamedQuery(name = "usuario.findByNombre",query = "Selecciona el nombre del usuario=:nombre_usuario")
-
 
 @Data
 @Entity
@@ -22,7 +20,7 @@ public class usuario implements Serializable{
       
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_usuario", nullable = false)
+    @Column(name = "id usuario", nullable = false)
     private Integer id_usuario;
     
     @Column(name = "nombre usuario")
@@ -40,7 +38,6 @@ public class usuario implements Serializable{
     
     @Column(name = "contraseña usuario")
     private String password;
-
 
     
 }

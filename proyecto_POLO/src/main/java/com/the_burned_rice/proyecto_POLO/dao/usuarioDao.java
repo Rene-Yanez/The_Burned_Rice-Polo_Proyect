@@ -7,5 +7,6 @@ import com.the_burned_rice.proyecto_POLO.model.usuario;
 
 public interface usuarioDao extends JpaRepository<usuario, Integer>{
 
-    usuario findfindByNombre(@Param("nombre usuario")String nombre_usuario);
+    
+    usuario findfindByIdUsuario(@Param("id usuario")String id_usuario);
 }
