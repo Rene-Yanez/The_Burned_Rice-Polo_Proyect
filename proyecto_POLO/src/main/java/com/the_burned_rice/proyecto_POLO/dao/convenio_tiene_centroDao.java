@@ -2,9 +2,11 @@ package com.the_burned_rice.proyecto_POLO.dao;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
 
 import com.the_burned_rice.proyecto_POLO.model.convenio_tiene_centro;
 
+@Repository
 public interface convenio_tiene_centroDao extends JpaRepository<convenio_tiene_centro, Integer>{
 
     
