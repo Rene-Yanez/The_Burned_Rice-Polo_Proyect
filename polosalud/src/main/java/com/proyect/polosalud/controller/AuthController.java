@@ -29,7 +29,7 @@ public class AuthController {
   public ResponseEntity<?> signIn(@RequestBody SignInDTO signInDTO, HttpServletResponse response) {
     User user = authService.signIn(signInDTO, response);
     if (user == null) {
-      return new ResponseEntity<>("Invalid email or password", HttpStatus.UNAUTHORIZED);
+      return new ResponseEntity<>("Correo y/o contraseña invalidos", HttpStatus.UNAUTHORIZED);
     }
     return new ResponseEntity<>(user, HttpStatus.OK);
   }
@@ -37,7 +37,7 @@ public class AuthController {
   @PostMapping("/sign-out")
   public ResponseEntity<String> signOut(HttpServletRequest request, HttpServletResponse response) {
     authService.signOut(request, response);
-    return new ResponseEntity<>("Successfully signed out", HttpStatus.OK);
+    return new ResponseEntity<>("Sesion cerrada correctamente", HttpStatus.OK);
   }
 
   @PutMapping("/make-user-admin")

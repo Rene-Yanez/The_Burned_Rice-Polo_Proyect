@@ -41,7 +41,7 @@ public class PostController {
       return new ResponseEntity<>(posts, HttpStatus.OK);
     }
 
-    return new ResponseEntity<>("Unauthorized", HttpStatus.UNAUTHORIZED);
+    return new ResponseEntity<>("Sin autorización", HttpStatus.UNAUTHORIZED);
   }
 
   @GetMapping("/{id}")
